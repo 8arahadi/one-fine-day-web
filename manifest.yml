@@ -1,8 +1,8 @@
 ---
 applications:
 #make sure to change the name and host attributes
-- name:      one-fine-day
-  host:      one-fine-day
+- name:      one-fine-day-web
+  host:      one-fine-day-web
   memory:    256M
   buildpack: https://github.com/cloudfoundry-community/staticfile-buildpack.git
   stack: cflinuxfs2
