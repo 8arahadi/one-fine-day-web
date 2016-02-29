@@ -1,0 +1,116 @@
+/* Empty. Add your own CSS if you like */
+#map {
+  width: 100%;
+  height: 70%;
+}
+
+.scroll {
+height: 100%;
+}
+
+.overlay:before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  position: absolute;
+  z-index: 999999999;
+  content: '';
+  top: 0;
+  left: 0;
+}
+
+.controls {
+  margin-top: 10px;
+  border: 1px solid transparent;
+  border-radius: 2px 0 0 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 32px;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#pac-input {
+  background-color: #fff;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 90%;
+}
+
+#pac-input:focus {
+  border-color: #4d90fe;
+}
+
+#type-selector {
+  color: #fff;
+  background-color: #4d90fe;
+  padding: 5px 11px 0px 11px;
+}
+
+#type-selector label {
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.tableLeft {
+  font-size:small;
+  color:#676767;
+  padding: 2px;
+}
+
+.tableRight {
+  font-size:small;
+  color:#787878;
+  padding: 2px;
+}
+
+.tableSumm {
+  border-top:solid 1px #787878;
+  padding: 4px;
+}
+
+
+
+
+
+.show {
+	//position:fixed;
+	//overflow:hidden;
+	left:0px;
+	top:0px;
+	height:70%;
+	width:100%;
+	/*z-index:-1;*/
+	text-align:center;
+	vertical-align: middle;
+}
+
+.show div {
+	display:inline-block;
+	margin:10%;
+	vertical-align: middle;
+	//border:3px solid red;
+	overflow:hidden;
+	z-index:1;
+	//padding: 10px;
+
+}
+
+.show img {
+	vertical-align: middle;
+	position:relative;
+	/*border:8px solid #ffffff;*/
+	width:100%;
+	z-index:1;
+	height:auto;
+}
+
+.helper {
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}

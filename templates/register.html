@@ -1,0 +1,43 @@
+<ion-view view-title="Registrasi Pengguna" name="login-view">
+<ion-nav-bar class="bar-stable">
+<ion-nav-buttons side="left">
+	<a class="button button-clear button-small icon ion-ios-arrow-back pull-right" href="#/login"></a>
+</ion-nav-buttons>
+</ion-nav-bar>
+<ion-content class="padding">	  
+<div class="list">
+	<div class="item item-avatar">
+		<img src="img/mamakyo.jpg">
+		<button class="button button-small login-loginbutton button-calm" ng-click="">Ubah Foto</button>
+	</div>
+	<!--<input type="id" placeholder="03" ng-model="newUser.id">-->
+	<label class="item item-input item-stacked-label">
+		<span class="input-label">Nama</span>
+		<input type="text" placeholder="ex: John Doe" ng-model="newUser.name">
+	</label>
+	<label class="item item-input item-stacked-label">
+		<span class="input-label">Alamat email</span>
+		<input type="email" placeholder="email@domain.com" ng-model="newUser.email">
+	</label>
+	<label class="item item-input item-stacked-label">
+		<span class="input-label">Password</span>
+		<input type="password" placeholder="Masukkan password anda (min 6 karakter)" ng-model="newUser.password">
+	</label>
+	<label class="item item-input item-stacked-label">
+		<span class="input-label">Ketik ulang password</span>
+		<input type="password" placeholder="Ketik ulang password anda" ng-model="newUser.password2">
+	</label>
+	<label class="item item-input item-stacked-label">
+		<span class="input-label">Nomor Handphone</span>
+		<input type="text" placeholder="+62-xxx-xxxx-xxxx"  ng-model="newUser.phone">
+	</label>
+	<label class="item item-input item-stacked-label">
+		<span class="input-label">Alamat</span>
+		<textarea placeholder="ex: Jln. Mampang Raya No.34 RT.007 RW.06" ng-model="newUser.address"></textarea>
+	</label>
+</div>
+
+<button class="button button-block button-calm login-loginbutton" ng-click="register()">Klik untuk Mendaftar</button>
+<!--<a class="button button-block icon-left ion-chevron-left button-assertive" href="#/login">Kembali</a>-->
+</ion-content>
+</ion-view>

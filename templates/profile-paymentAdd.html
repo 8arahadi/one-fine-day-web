@@ -1,0 +1,27 @@
+<ion-view view-title="Tambah metode pembayaran" hide-nav-button="true">
+<ion-content class="padding">
+<div class="list">
+	<label class="item item-input">
+	<span class="input-label">Nama Kartu</span>
+		<input type="text" placeholder="ex: Kartu Kreditku" ng-model="newWallet.payment_name">
+	</label>
+	<label class="item item-input item-select">
+		<span class="input-label">Tipe Pembayaran</span>
+		<select ng-model="walletTypeData.index" ng-options="walletType.indexOf(item) as item for item in walletType"></select>
+	</label>
+	<label class="item item-input">
+		<span class="input-label">Nomor Kartu</span>
+		<input type="text" placeholder="ex: 52221232123122" ng-model="newWallet.card_number">
+	</label>
+	<label class="item item-input">
+		<span class="input-label">Tanggal Berakhir</span>
+		<input type="text" placeholder="mm/yyyy" ng-model="newWallet.card_expiry">
+	</label>
+	<label class="item item-input">
+		<span class="input-label">CVC Code</span>
+		<input type="text" placeholder="ex: XXX" ng-model="newWallet.card_ccv">
+	</label>
+</div>
+<button class="button button-calm button-block login-loginbutton center" ng-click="createWallet()">Simpan</button>
+</ion-content>
+</ion-view>

@@ -1,0 +1,67 @@
+<ion-view view-title="Event" cache-view="true">
+<ion-nav-buttons side="right">
+<button class="button button-clear icon-button mdi mdi-dots-vertical" ng-click="popover.show($event)"></button>
+</ion-nav-buttons>
+<ion-content scroll-sista="tabs" class="padding background animated fadeIn">
+<div class="list card">
+	<div class="item">	
+		<h2 class="event-header">Event Location</h2>
+	</div>
+	<div class="item item-body">
+		<img src="img/ecopark.png">
+		<p>
+      This event will be located at Ancol Ecopark and Bandar Djakarta.
+    </p>
+	</div>
+	<a class="item item-icon-left event-footer" ng-click="openMaps()">
+		<i class="icon mdi mdi-map-marker"></i>
+		<h2>See the Location</h2>
+	</a>
+</div>
+<div class="list card">
+	<div class="item">	
+		<h2 class="event-header">A Day at a Glance</h2>
+	</div>
+	<div class="item item-body">
+		<img src="img/outbound.png">
+		<p>
+      Unlike the usual IBM "serious" event, IBMers will have 85% Fun
+    </p>
+	</div>
+	<a class="item item-icon-left event-footer" ng-click="openRundown()">
+		<i class="icon mdi mdi-clock"></i>
+		<h2>View Event Rundown</h2>
+	</a>
+</div>
+<div class="list card">
+	<div class="item">	
+		<h2 class="event-header">Needs to Bring</h2>
+	</div>
+	<div class="item item-body">
+		<img src="img/needs.jpg">
+		<p>
+      Because we will have fun, make sure you bring yourself these items
+    </p>
+	</div>
+	<a class="item item-icon-left event-footer" ng-click="openNeeds()">
+		<i class="icon mdi mdi-check"></i>
+		<h2>View Item Checklists</h2>
+	</a>
+</div>
+<div class="list card">
+	<div class="item">	
+		<h2 class="event-header">Grouping Information</h2>
+	</div>
+	<div class="item item-body">
+		<img src="img/group.png">
+		<p>
+      To make sure you meet new friends, you are putted in group with other IBMers
+    </p>
+	</div>
+	<a class="item item-icon-left event-footer" ng-click="openGroup()">
+		<i class="icon mdi mdi-account-multiple"></i>
+		<h2>View Group Lists</h2>
+	</a>
+</div>
+</ion-content>
+</ion-view>

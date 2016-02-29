@@ -1,0 +1,111 @@
+<ion-view view-title="Tiba di tujuan" hide-back-button="true" show-nav-button="true">
+<ion-content class="padding">
+<div ng-show="screenState=='WAITPAYMENT'" class="list list-inset">
+	<div class="item" style="padding:6px">
+		<b>Informasi Perjalanan</b>
+	</div>
+	<div class="item" align="center" style="padding:6px">
+		<table style="width:90%">
+			<tr>
+				<td class="tableLeft">Jarak</td>
+				<td class="tableRight" align="right">{{trip.distance}} km</td>
+			</tr>
+			<tr>
+				<td class="tableLeft">Waktu</td>
+				<td class="tableRight" align="right">{{calculateTime(trip.trip_date_start,trip.trip_date_end)}}</td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<div ng-show="screenState=='WAITPAYMENT'" class="list list-inset">
+	<div class="item" style="padding:6px">
+		<b>Detil biaya perjalanan</b>
+	</div>
+	<div class="item" align="center" style="padding:6px">
+		<table style="width:90%">
+			<tr>
+				<td class="tableLeft">Argometer</td>
+				<td class="tableRight" align="right">+Rp. {{trip.fare}}</td>
+			</tr>
+			<tr>
+				<td class="tableLeft">Biaya prioritas</td>
+				<td class="tableRight" align="right">+Rp. {{surcharge}}</td>
+			</tr>
+			<tr>
+				<td class="tableLeft tableSumm">Pembayaran minimum</td>
+				<td class="tableRight tableSumm" align="right">+Rp. {{minimumPayment}}</td>
+			</tr>
+			<tr>
+				<td class="tableLeft tableSumm">Penggunaan Poin</td>
+				<td class="tableRight tableSumm" align="right">-Rp. {{usedPoint}}</td>
+			</tr>
+			<tr style="background-color:#EEE;">
+				<td class="tableLeft tableSumm"><b>Total biaya<b></td>
+				<td class="tableRight tableSumm" align="right"><b>+Rp. {{totalFare}}<b></td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<div ng-show="screenState=='WAITPAYMENT'" class="list list-inset">
+	<div class="item" style="padding:6px">
+		<b>Metode pembayaran</b>
+	</div>
+	<div class="item item-input item-select" style="padding:6px">
+		<div class='input-label'>Pilih</div>
+		<select ng-model="walletData.selectedPaymentMethod" ng-change="changePayment()" ng-options="item.payment_name as item.payment_name for item in wallets"></select>
+		<!-- <select ng-model="walletData.index" ng-change="changePayment()" ng-options="wallets.indexOf(item) as item.name for item in wallets"></select> -->
+	</div>
+	<!-- <div ng-show="isTunai" class="item item-text-wrap tableRight" align="center" style="padding:6px">
+		*untuk pembayaran tunai mohon menunggu konfirmasi dari driver
+	</div> -->
+	<div class="item item-text-wrap tableRight" align="center" style="padding:6px">
+		*Mohon tidak meninggalkan taksi sebelum driver konfirmasi pembayaran anda
+	</div>
+	<div ng-hide="isTunai" class="item" align="center" style="padding:6px">
+	 	<label class="item item-input item-stacked-label">
+			<span class="input-label">Tip (Opsional)</span>
+			<input type="text" placeholder="Masukkan tip yang ingin diberi" ng-model="data.tip">
+ 		</label>
+		<button class="button button-block button-positive" ng-click="payNonCash()">
+			Konfirmasi
+		</button>
+	</div>
+<!-- 	<button class="button button-block button-positive" ng-click="hehe()">
+			Hehe
+		</button> -->
+</div>
+
+<div ng-show="screenState == 'WAITRATE'" ng-hide="screenState == 'WAITPAYMENT'" class="list list-inset">
+	<div class="item item-text-wrap" style="padding:6px;text-align:center">
+		<h2>Terima kasih telah menggunakan Blue bird</h2>
+		<!-- <img ng-src='img/thankyou.png' width="50%"> -->
+		<h3>Anda mendapatkan tambahan {{pointGained}} loyalty point</h3>
+	</div>
+</div>
+<div ng-show="screenState=='WAITRATE'" ng-hide="screenState=='WAITPAYMENT'" class="list list-inset">
+	<div class="item" style="padding:6px">
+		<b>Beri nilai driver anda</b>
+	</div>
+	<div class="item item-avatar">
+		<img src="img/driver_1.jpg">
+		<h3>{{driver.name}}</h3>
+		<p>{{trip.hulls_number}}</p>
+	</div>
+	<div class="item item-text-wrap tableRight" align="center" style="padding:6px;">
+		<rating style="color:gold;"readonly="false" ng-model="dataRating.rating" max="dataRating.max" ></rating>
+	</div>
+	<div class="item item-text-wrap tableRight" align="center" style="padding:0px">
+		<label class="item item-input">
+			<textarea ng-model="dataRating.comment" placeholder="Komentar"></textarea>
+		</label>
+	</div>
+	<div class="item" align="center" style="padding:6px">
+		<button class="button button-block button-positive" ng-click="submitRate()">
+			Kirim nilai dan komentar
+		</button>
+	</div>
+</div>
+</ion-content>
+</ion-view>

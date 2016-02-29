@@ -1,0 +1,31 @@
+<ion-view view-title="Ask" cache-view="false">
+<ion-nav-buttons side="right">
+<button class="button button-clear icon-button mdi mdi-dots-vertical" ng-click="popover.show($event)"></button>
+</ion-nav-buttons>
+<ion-content scroll="false" class="padding animated fadeIn">
+<div class="questionbox">
+	<div class="row">
+		<h4>Ask Me a Question</h4>
+	</div>
+	<ion-item class="accordion-title" ng-click="ask(1)" ng-class="{active: isGroupShown(1)}"><i class="icon" ng-class="isGroupShown(1) ? 'ion-minus' : 'ion-plus'"></i>&nbsp;What is One Fine Day?</ion-item>
+	<ion-item class="accordion-title" ng-click="ask(2)" ng-class="{active: isGroupShown(1)}"><i class="icon" ng-class="isGroupShown(1) ? 'ion-minus' : 'ion-plus'"></i>&nbsp;Why should I join One Fine Day?</ion-item>
+	<ion-item class="accordion-title" ng-click="ask(3)" ng-class="{active: isGroupShown(1)}"><i class="icon" ng-class="isGroupShown(1) ? 'ion-minus' : 'ion-plus'"></i>&nbsp;Where is the event location?</ion-item>
+	<ion-item class="accordion-title" ng-click="ask(4)" ng-class="{active: isGroupShown(1)}"><i class="icon" ng-class="isGroupShown(1) ? 'ion-minus' : 'ion-plus'"></i>&nbsp;Can I Join This Program?</ion-item>
+	<ion-item class="accordion-title" ng-click="ask(5)" ng-class="{active: isGroupShown(1)}"><i class="icon" ng-class="isGroupShown(1) ? 'ion-minus' : 'ion-plus'"></i>&nbsp;How can I go there?</ion-item>
+	<ion-item class="accordion-title" ng-click="ask(6)" ng-class="{active: isGroupShown(1)}"><i class="icon" ng-class="isGroupShown(1) ? 'ion-minus' : 'ion-plus'"></i>&nbsp;Where is the event location?</ion-item>
+</div>
+</ion-content>
+<ion-content scroll="false" class="padding animated fadeIn">
+<div class="answerbox">
+	<hr>
+	<div class="row">
+		<div class="col col-30">
+			<img src="img/gunawan-faq.png">
+		</div>
+		<div class="col">
+			<p id="answer">Hello, my name is Gunawan Susanto. Your head must be full of question right now so Feel free to ask me a question above and I will answer it for you.</p>
+		</div>
+	</div>
+</div>
+</ion-content>
+</ion-view>

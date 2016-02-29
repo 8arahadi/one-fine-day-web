@@ -1,0 +1,37 @@
+<ion-view view-title="Edit Profil">
+<ion-content>
+<ion-list>
+<div class="list edit-profile">
+	<div class="item item-avatar">
+		<img src="img/mamakyo.jpg">
+		<button class="button button-small button-calm login-loginbutton" ng-click="">Ubah Foto</button>
+	</div>
+	<label class="item item-input item-stacked-label">
+		<span class="input-label">Email</span>
+		<input placeholder="Email" type="text" ng-model="profile.email_customer" value="{{profile.email_customer}}">
+	</label>
+	<label class="item item-input item-stacked-label">
+		<span class="input-label">Nama</span>
+		<input placeholder="Nama" type="text" ng-model="profile.name" value="{{profile.name}}">
+	</label>
+	<label class="item item-input item-stacked-label">
+		<span class="input-label">Password</span>
+		<input type="password" ng-model="profile.password" placeholder="Password">
+	</label>
+	<label class="item item-input item-stacked-label">
+		<span class="input-label">Konfirmasi Password</span>
+		<input type="password" ng-model="profile.password2" placeholder="Ketik ulang password anda">
+	</label>
+	<label class="item item-input item-stacked-label">
+		<span class="input-label">Nomor Handphone</span>
+		<input type="text" ng-model="profile.phone_number" placeholder="Nomor Handphone" value="{{profile.phone_number}}">
+	</label>
+	<label class="item item-input item-stacked-label">
+		<span class="input-label">Alamat</span>
+		<input type="text" ng-model="profile.address" placeholder="Alamat" value="{{profile.address}}">
+	</label>
+	<button class="button button-block button-calm login-loginbutton" ng-click="editProfile()">Simpan</button>
+</div>
+</ion-list>
+</ion-content>
+</ion-view>

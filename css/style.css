@@ -1,0 +1,436 @@
+/* Empty. Add your own CSS if you like */
+body{
+  font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+}
+html {
+  font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+  font-size: 100%;
+}
+
+h1 {
+  font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+  font-size: 6.854em;
+}
+
+h2 {font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;font-size: 4.236em;}
+
+h3 {font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;font-size: 2.618em;}
+
+h4 {font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;font-size: 1.618em;}
+
+small, .font_small {font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;font-size: 0.618em;}
+#map {
+  width: 100%;
+  height: 300px;
+}
+
+map{
+  width: 100%;
+  height: 100% !important;
+}
+
+.scroll, .mapWrap{
+  height: 100%;
+}
+
+.scroll {
+  height: 100%;
+}
+
+.overlay:before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  position: absolute;
+  z-index: 999999999;
+  content: '';
+  top: 0;
+  left: 0;
+}
+
+.controls {
+  margin-top: 10px;
+  border: 1px solid transparent;
+  border-radius: 2px 0 0 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 32px;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  background-color:blue;
+}
+
+#pac-input {
+  background-color: #fff;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 90%;
+  border-radius:4px;
+}
+
+#pac-input:focus {
+  border-color: #4d90fe;
+}
+
+#type-selector {
+  color: #fff;
+  background-color: #4d90fe;
+  padding: 5px 11px 0px 11px;
+}
+
+#type-selector label {
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.tableLeft {
+  font-size:small;
+  color:#676767;
+  padding: 2px;
+}
+
+.tableRight {
+  font-size:small;
+  color:#787878;
+  padding: 2px;
+}
+
+.tableSumm {
+  border-top:solid 1px #787878;
+  padding: 4px;
+}
+
+.center{
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+
+.show {
+  left:0px;
+  top:0px;
+  height:100%;
+  width:100%;
+  /*z-index:-1;*/
+  text-align:center;
+  vertical-align: middle;
+}
+
+.show div {
+  display:inline-block;
+  margin:10%;
+  vertical-align: middle;
+  /*//border:3px solid red;*/
+  overflow:hidden;
+  z-index:1;
+  //padding: 10px;
+
+}
+
+.show img {
+  vertical-align: middle;
+  position:relative;
+  /*border:8px solid #ffffff;*/
+  width:100%;
+  z-index:0;
+  height:auto;
+}
+
+.helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+
+ul.rating li {
+  display: inline;
+  border: 0px;
+  background: none;
+  padding: 5px 10px;
+}
+ul.rating li i {
+  font-size: 30px;
+}
+
+ul.small.rating li {
+  display: inline;
+  border: 0px;
+  background: none;
+  padding: 1px 1px;
+}
+ul.small.rating  li i {
+  font-size: 12px;
+}
+
+/*login page*/
+.login{
+  background-color:#152935;
+  background-image:linear-gradient(to bottom, rgba(24, 57, 78, 0.3), rgba(24, 57, 78, 0.3)), url("../img/login-pattern.png");
+  background-position:center center;
+  background-size:contain;
+  
+}
+.login-title{
+  color:#FF7832 !important;
+  font-size:1.618em;
+  font-weight: 700;
+}
+.item-floating-label, .list .item.item-floating-label{
+  border-bottom:2px solid #FF7832;
+}
+.login-form{
+  background-color: rgba(3, 18, 24, 0.86);
+  border-radius: 4px;
+  padding: 0px 20px;
+  margin: 40% 0%;
+}
+.login-logo{
+  padding:30px;
+}
+.login-list,.login-list .item{
+  background-color:transparent;
+  border:none;
+}
+.login-list .item input, .login-list .input-label{
+  color:#ffffff;
+  font-size:1rem;
+}
+.login-loginbutton{
+  border:none;
+  font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+  background-color:#FF7832 !important;
+  border-radius:0px;
+  font-size:1rem;
+}
+.bluebutton{
+  border:none;
+  font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+  background-color:#FF7832 !important;
+  border-radius:4px;
+}
+.login-forgot{
+  color:#A5A5A5;
+  text-decoration: none;
+}
+/*header bar*/
+.bar{
+  background-color:#FF7832 !important;
+}
+.bar .title{
+  color:#ffffff !important;
+  font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+  font-weight:600;
+}
+/*sidemenu*/
+.side-menu{
+  background-color:#ffffff;
+}
+.menu .bar.bar-header.expanded{
+  /*background-image:linear-gradient(to bottom, rgba(24, 57, 78, 0.42), rgba(24, 57, 78, 0.85)), url("../img/mamakyo.jpg");*/
+  background-image:url("../img/menu.png");
+  background-position:center center;
+  background-size:cover;
+}
+.side-menu a{
+  font-size:16px;
+}
+.menu-bottom{
+  bottom:4px;
+}
+.sidemenu-nama{
+  margin:0px;
+  padding-bottom:6px;
+}
+.sidemenu-email{
+  font-size:14px;
+}
+.sidemenu-content{
+
+}
+.edit-profile{
+  padding:5%;
+}
+.point-text{
+  color:#010101;
+}
+.gm-style-cc{
+  display:none;
+}
+/*halaman history*/
+.list-history{
+  text-decoration:none;
+  font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+  color:#000000;
+  font-size: 14px;
+}
+.history-avatar{
+  width:35px;
+  height:35px;
+  border-radius:50%;
+  margin-left:10px;
+}
+.col-15{
+  -moz-box-flex:0;
+  flex:0 0 15%;
+  max-width:15%;
+}
+.history-date{
+  margin:0px;
+  font-size:16px;
+}
+.history-fare{
+  font-size:16px;
+}
+.history-driver{
+  margin:0px;
+  color:#AAA;
+  font-size:16px;
+}
+.history-icon{
+  float:left;
+  padding-right:8px;
+  color:#0085C5;
+  font-size:18px !important;
+}
+/**/
+.rundown-list li{
+  border-bottom:solid 1px #eee !important;
+  padding:1.618em;
+}
+.group-list li{
+  border-bottom:solid 1px #eee !important;
+  padding:1em;
+}
+#maps {
+  width: 100%;
+  height: 100%;
+}
+.custom-tabs .tabs{
+  margin-top:6px !important;
+
+}
+.popover-open .popover, .popover-open .popover-backdrop{
+  height:170px;
+}
+.disclaimer-list{
+  list-style: decimal !important;
+  padding:1em;
+}
+.card .item-avatar{
+  min-height: 0px !important;
+  height: 60px !important;
+}
+.event-header{
+  font-size:1.618em !important;
+  font-weight:700 !important;
+}
+.event-footer{
+  border-top:solid 1px #eee !important;
+}
+.event-footer i{
+  color:#4178BE !important;
+  font-size: 1.618em !important;
+}
+.event-footer h2{
+  color:#4178BE;
+  font-weight: 400;
+}
+.item p{
+  white-space: normal;
+}
+/*accordion*/
+.list .item.item-accordion {
+  line-height: 38px;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: 0.09s all linear;
+}
+.list .item.item-accordion.ng-hide {
+  line-height: 0px;
+}
+.list .item.item-accordion.ng-hide-add,
+.list .item.item-accordion.ng-hide-remove {
+  display: block !important;
+}
+.item-accordion p{
+  text-align: justify;
+  font-size: 1em !important;
+  padding:1em;
+}
+.accordion-title{
+  font-size: 1em;
+  padding:1em;
+  font-weight: 600;
+  border:none;
+}
+.padding{
+  padding:1em !important;
+}
+ion-tabs.tabs-color-active-positive .tab-item.activated, ion-tabs.tabs-color-active-positive .tab-item.active, ion-tabs.tabs-color-active-positive .tab-item.tab-item-active{
+  color:#FF7832;
+}
+.tabs-striped .tab-item.activated, .tabs-striped .tab-item.active, .tabs-striped .tab-item.tab-item-active{
+  border-color: #FF7832;
+}
+.questionbox{
+  padding:1em;
+  height:40% !important;
+  overflow:auto;
+}
+.answerbox{
+  position:absolute;
+  text-align: justify;
+  background-color: white;
+  bottom:0;
+  max-height:60 !important;
+  padding:1em;
+}
+#answer{
+  font-weight:500;
+  background-color: rgba(110, 110, 110, 0.24);
+  padding: 1em;
+}
+.item-trivia{
+  border: none;
+  background-color: rgba(128, 128, 128, 0.18);
+  margin: 1em;
+  white-space:normal;
+}
+.background{
+  background-color: rgba(24, 22, 22, 0.16);
+}
+.item-trivia-title{
+  white-space:normal !important;
+  font-weight: 600 !important;
+}

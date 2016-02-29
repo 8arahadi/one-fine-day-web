@@ -1,0 +1,36 @@
+<ion-view view-title="Timeline" cache-view="false">
+<ion-nav-buttons side="right">
+<button class="button button-clear icon-button mdi mdi-dots-vertical" ng-click="popover.show($event)"></button>
+</ion-nav-buttons>
+<ion-content scroll=true scroll-sista="tabs" class="padding background animated fadeIn">
+<ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()" refreshing-text="Fetching ..." refreshing-icon="ion-loading-b"></ion-refresher>
+<div class="list card">
+  <div class="item">
+    <p style="display:inline;font-size:2.618em;color:#ff7832;font-weight:700;">{{numDays}} Days</p><p style="display:inline;font-size:1.618em;font-weight: 600;"> to One Fine Day</p>
+  </div>
+  <div class="item">
+    <p>Friday, 04 March 2016, Ancol Ecopark & Bandar Djakarta</p>
+  </div>
+</div>
+<div class="card" ng-show="showTrivia">
+  <div class="item trivia-question">
+    <h2 class="item-trivia-title">{{trivia.question}}</h2>
+    <ion-radio class="item-trivia" ng-model="choice" ng-value="'A'">{{trivia.A}}</ion-radio>
+    <ion-radio class="item-trivia" ng-model="choice" ng-value="'B'">{{trivia.B}}</ion-radio>
+    <ion-radio class="item-trivia" ng-model="choice" ng-value="'C'">{{trivia.C}}</ion-radio>
+    <ion-radio class="item-trivia" ng-model="choice" ng-value="'D'">{{trivia.D}}</ion-radio>
+    <button class="button button-block button-calm login-loginbutton center">Answer</button>
+  </div>
+</div>
+<div class="card" ng-show="showPoll">
+  <div class="item trivia-question">
+    <h2 class="item-trivia-title">{{poll.question}}</h2>
+    <ion-radio class="item-trivia" ng-model="choice" ng-value="'A'">{{poll.A}}</ion-radio>
+    <ion-radio class="item-trivia" ng-model="choice" ng-value="'B'">{{poll.B}}</ion-radio>
+    <button class="button button-block button-calm login-loginbutton center">Answer</button>
+  </div>
+</div>
+<div id="trivia"></div>
+<div id="poll"></div>
+</ion-content>
+</ion-view>

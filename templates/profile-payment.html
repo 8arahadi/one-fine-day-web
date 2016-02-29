@@ -1,0 +1,30 @@
+<ion-view cache-view="false" view-title="Metode pembayaran">
+<ion-content class="padding">
+<ion-list>
+<ion-item class="item-remove-animate item-avatar" ng-repeat="wallet in wallets" type="item-text-wrap">
+<img ng-src="img/cash.png" ng-if="wallet.payment_type=='Tunai'">
+<img ng-src="img/credit.png" ng-if="wallet.payment_type=='Kartu Kredit'">
+<img ng-src="img/debit.png" ng-if="wallet.payment_type=='Kartu Debit'">
+<img ng-src="img/voucher.png" ng-if="wallet.payment_type=='Voucher Prabayar'">
+<div class="row">
+	<div class="col">
+		<h2>{{wallet.payment_name}}</h2>
+	</div>
+</div>
+<div class="row">
+	<div class="col">
+		<p style="color:#ccc;">{{wallet.payment_type}}</p>
+	</div>
+</div>
+<div class="row">
+	<p style="color:#ccc;">{{wallet.masked}}</p>
+</div>
+<span ng-show="wallet.payment_type!='Tunai'" class="item-note"> </span>
+<ion-option-button ng-show="wallet.payment_type!='Tunai'" class="button-assertive" ng-click="remove(wallet)">
+Hapus
+</ion-option-button>
+</ion-item>
+<a class="button button-calm login-loginbutton center" href="#/app/profile/payment/add">Tambah Metode Pembayaran</a>
+</ion-list>
+</ion-content>
+</ion-view>

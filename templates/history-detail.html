@@ -1,0 +1,112 @@
+<ion-view view-title="Detail Pemesanan" hide-back-button="true">
+<ion-nav-buttons side="left">
+<a class="button button-icon button-clear mdi mdi-arrow-left pull-left" style="padding:5px;" href="#/app/history"></a>
+</ion-nav-buttons>
+<ion-content class="padding">
+<div class="list">	 
+	<div class="row">
+		<h4>Profil Pengemudi</h4>
+	</div>
+	<div class="row">
+		<div class="col col-20">
+			<img src="img/driver_1.jpg" style="width:60px;border-radius:50%;">
+		</div>
+		<div class="col col-80">
+			<div class="row">
+				<i class="mdi mdi-calendar history-icon"></i><p>{{history.trip_date_end | date:'dd MMM yyyy hh:mm'}}</p>
+			</div>
+			<div class="row">
+				<i class="mdi mdi-account history-icon"></i><p>{{driver.name}}</p>
+			</div>
+			<div class="row">
+				<i class="mdi mdi-car history-icon"></i><p>{{history.hulls_number}}</p>
+			</div>
+		</div>
+	</div>
+	<div class="row" style="border-top:1px solid #000;padding-top:10px;">
+		<h4>Detail Perjalanan</h4>
+	</div>
+	<div class="row">
+		<img style="width:100%;height:50%;padding:10px;border-radius:4px;" src="http://maps.googleapis.com/maps/api/staticmap?zoom=13&size=320x240&maptype=roadmap&markers=color:red%7Clabel:A%7C-6.1932714,106.8219954&markers=color:blue%7Clabel:B%7C-6.1812067,106.8289681&path=color:0x0000ff|weight:5|-6.1932714,106.8219954|-6.1812067,106.8289681
+		"/>
+	</div>
+	<div class="row">
+		<div class="col col-10">
+			<i class="mdi mdi-map-marker history-icon"></i>
+		</div>
+		<div class="col col-80">
+			<p>{{history.origin_name}}</p>
+		</div>
+		<div class="col col-10">
+			<i class="icon mdi mdi-star history-icon" style="color:#bbb;"ng-click="saveFromPOIPopup()"></i>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col col-10">
+			<i class="mdi mdi-flag-checkered history-icon"></i>
+		</div>
+		<div class="col col-80">
+			<p>{{history.destination_name}}</p>
+		</div>
+		<div class="col col-10">
+			<i class="icon mdi mdi-star history-icon" style="color:#bbb;"ng-click="saveToPOIPopup()"></i>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<i class="mdi mdi-road-variant history-icon"></i><p>{{history.distance}} km</p>
+		</div>
+		<div class="col">
+			<i class="mdi mdi-timelapse history-icon"></i><p>{{calculateTime(history.trip_date_start,history.trip_date_end)}}</p>
+		</div>	
+	</div>
+	<div class="row" style="border-top:1px solid #000;padding-top:10px;">
+		<h4>Detail Biaya</h4>
+	</div>
+	<div class="row">
+		<table width="100%">
+			<tr>
+				<td class="tableLeft">Argometer</td>
+				<td class="tableRight" align="right">{{history.fare}}</td>
+			</tr>
+			<tr>
+				<td class="tableLeft">Biaya prioritas</td>
+				<td class="tableRight" align="right">{{history.sure_charge}}</td>
+			</tr>
+			<tr>
+				<td class="tableLeft">Tip</td>
+				<td class="tableRight" align="right">{{history.tip}}</td>
+			</tr>
+			<tr>
+				<td class="tableLeft tableSumm">Pembayaran minimum</td>
+				<td class="tableRight tableSumm" align="right">{{history.minimumPayment}}</td>
+			</tr>
+			<tr>
+				<td class="tableLeft tableSumm">Penggunaan Poin</td>
+				<td class="tableRight tableSumm" align="right">{{history.loyalty_point}}</td>
+			</tr>
+			<tr style="background-color:#EEE;">
+				<td class="tableLeft tableSumm"><b>Total biaya<b></td>
+				<td class="tableRight tableSumm" align="right"><b>{{history.total_fare}}<b></td>
+			</tr>
+		</table>
+	</div>
+	<div class="row" style="margin-top:10px;padding-top:10px;border-top:1px solid #000;">
+		<div class="col">
+			<p align='left' style="font-weight:bold">Rating anda:</p>
+		</div>
+		<div class="col">
+			<rating align='left' class="enroute-rating small" readonly="true" ng-model="driver.rating" max="5" ></rating> <p style="color:#000;display:inline;font-size:13px;">({{driver.rating}})</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<p align='left' style="font-weight:bold">Komentar:</p>
+		</div>
+		<div class="col">
+			<p align='left' style="font-style:italic">"Ramah dan pintar memilih jalan"</p>
+		</div>
+	</div>
+</div>
+</ion-content>
+</ion-view>

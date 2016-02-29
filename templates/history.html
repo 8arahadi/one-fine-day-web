@@ -1,0 +1,30 @@
+<ion-view cache-view="false" view-title="Riwayat Perjalanan">
+<ion-nav-buttons side="right">
+<button class="button button-clear icon-button ion-loop" ng-click="refresh()">
+</button>
+</ion-nav-buttons>
+<ion-content>
+<div class="list">
+  <!-- <ion-item class="item" ng-repeat="history in history" type="item-text-wrap" href="#/app/history/{{history.id_trip}}"> -->
+  <a ng-href="#/app/history/{{history.id_trip}}" ng-repeat="history in history" class="list-history">
+  <div class="row" ng-show="history.trip_status=='CLOSED'" style="padding:25px 5px 20px 5px;">
+    <div class="col col-15" style="padding:0px;">
+      <img src="img/driver_1.jpg" class="history-avatar">
+    </div>
+    <div class="col col-50" style="padding:0px 10px;">
+      <i class="history-icon mdi mdi-calendar-clock"></i>
+      <p class="history-date">{{history.trip_date_end | date:'dd/MM/yy hh:mm'}}</p>
+      <i class="history-icon mdi mdi-car"></i>
+      <p class="history-driver">{{history.hulls_number}}</p>
+    </div>
+    <div class="col col-40" style="padding:0px 5px;font-size:14px;">
+      <i class="history-icon mdi mdi-cash"></i>
+      <p class="history-fare">Rp. {{history.fare + history.tip + history.sure_charge}}</p>
+    </div>
+  </div>
+  </a>
+  <!-- <i class="icon ion-chevron-right icon-accessory"></i> -->
+  <!-- </ion-item> -->
+</div>
+</ion-content>
+</ion-view>

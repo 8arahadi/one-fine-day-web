@@ -1,0 +1,37 @@
+<ion-view view-title="Location">
+<ion-nav-buttons side="left">
+<button class="button button-clear icon-button mdi mdi-arrow-left" ng-click="back()"></button>
+</ion-nav-buttons>
+<ion-content class="padding animated fadeIn">
+<ion-item class="item-stable accordion-title" ng-click="toggleGroup(1)" ng-class="{active: isGroupShown(1)}">
+<i class="icon" ng-class="isGroupShown(1) ? 'ion-minus' : 'ion-plus'"></i>&nbsp;Maps
+</ion-item>
+<ion-item class="item-accordion" ng-show="isGroupShown(1)">
+<div id="map"></div>
+<p>One Fine Day location is at Ancol Ecopark and Bandar Djakarta. Follow this maps if you seek for direction</p>
+</ion-item>
+<ion-item class="item-stable accordion-title" ng-click="toggleGroup(2)" ng-class="{active: isGroupShown(2)}">
+<i class="icon" ng-class="isGroupShown(2) ? 'ion-minus' : 'ion-plus'"></i>&nbsp;Pickup Location
+</ion-item>
+<ion-item class="item-accordion item-image" ng-show="isGroupShown(2)">
+<img src="img/meetup.png">
+<p>Pickup location is at Sinarmas Land lot (previous as EX car park)</p>
+</ion-item>
+<ion-item class="item-stable accordion-title" ng-click="toggleGroup(3)" ng-class="{active: isGroupShown(3)}">
+<i class="icon" ng-class="isGroupShown(3) ? 'ion-minus' : 'ion-plus'"></i>&nbsp;Ancol Ecopark
+</ion-item>
+<ion-item class="item-accordion item-image" ng-show="isGroupShown(3)">
+<img src="img/ecopark.jpg">
+<p>After you arrive at learning farm, walk to the field and gather at point meeting. Outbound and opening will be held in Ancol Ecopark</p>
+<p>Facilities:Musholla, Saung, Toilet, Wudhu Places, Car Park</p>
+</ion-item>
+<ion-item class="item-stable accordion-title" ng-click="toggleGroup(4)" ng-class="{active: isGroupShown(4)}">
+<i class="icon" ng-class="isGroupShown(4) ? 'ion-minus' : 'ion-plus'"></i>&nbsp;Bandar Djakarta
+</ion-item>
+<ion-item class="item-accordion item-image" ng-show="isGroupShown(4)">
+<img src="img/bandar-djakarta.jpg">
+<p>Dinner will be held in Bandar Djakarta, Seafood Restaurant</p>
+<p>Facilities:Toilet, Wudhu Places, Musholla</p>
+</ion-item>
+</ion-content>
+</ion-view>

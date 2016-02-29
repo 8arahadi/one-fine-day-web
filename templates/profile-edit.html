@@ -1,0 +1,39 @@
+<ion-view view-title="Ubah profil">
+<ion-content>
+<div class="list">
+	<ion-list>
+	<div class="item item-avatar">
+		<img src="img/leonardo_dicaprio.jpg">
+		<button class="button button-small button-calm" ng-click="">Ubah Foto</button>
+	</div>
+		<label class="item item-input item-stacked-label" style="padding:5px">
+			<span class="input-label">Email</span>
+			<input readonly type="text" ng-model="profile.email_customer" placeholder="Name" value="{{profile.email_customer}}">
+		</label>
+		<label class="item item-input" style="padding:5px">
+			<span class="input-label">Nama</span>
+			<input type="text" ng-model="profile.name" placeholder="Name" value="{{profile.name}}">
+		</label>
+		<label class="item item-input" style="padding:5px">
+			<span class="input-label">Password</span>
+			<input type="password" ng-model="profile.password" placeholder="Password">
+		</label>
+		<label class="item item-input" style="padding:5px">
+			<span class="input-label">Ketik ulang password</span>
+			<input type="password" ng-model="profile.password2" placeholder="Password">
+		</label>
+		<label class="item item-input" style="padding:5px">
+			<span class="input-label">Nomor handphone</span>
+			<input type="text" ng-model="profile.phone_number" placeholder="Nomor Handphone" value="{{profile.phone_number}}">
+		</label>
+		<label class="item item-input" style="padding:5px">
+			<span class="input-label">Alamat</span>
+			<input type="text" ng-model="profile.address" placeholder="Alamat" value="{{profile.address}}">
+		</label>
+		<button class="button button-block button-calm" ng-click="editProfile()">
+			Simpan
+		</button>
+	</ion-list>
+</div>
+</ion-content>
+</ion-view>

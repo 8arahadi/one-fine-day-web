@@ -1,0 +1,12 @@
+<ion-view view-title="Photo">
+<ion-nav-buttons side="right">
+<button class="button button-clear icon-button mdi mdi-dots-vertical" ng-click="popover.show($event)"></button>
+</ion-nav-buttons>
+<ion-content class="padding animated fadeIn" scroll-sista="tabs">
+<ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()" refreshing-text="Fetching ..." refreshing-icon="ion-loading-b"></ion-refresher>
+<div class="row">
+	<p>Upload your own photo using #ibmfunkickoff2016 hashtag (for twitter please also mentioned it to @IBMIndo) and it will show in this gallery.</p>
+</div>
+<ion-gallery ion-gallery-items="photos"></ion-gallery>
+</ion-content>
+</ion-view>

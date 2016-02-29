@@ -1,0 +1,27 @@
+<ion-view view-title="Login" name="login-view" hide-nav-bar="true" class="login">
+<ion-content class="padding" scroll="false">
+<form method="post" class="login-form" enctype="text/plain">
+<div class="row">
+  <div class="col">
+    <h4 align="center" class="login-title">IBM One Fine Day</h4>
+  </div>
+</div>
+  <div class="list login-list">
+    <label class="item item-input item-floating-label">
+      <span class="input-label">Employee ID Number</span>
+      <input type="text" placeholder="Employee ID Number (6 Digit)" ng-model="data.username" class="input-login">
+    </label>
+  </div>
+  <div class="row">
+    <div class="col">
+      <input type="submit" value="Login" class="button button-block button-calm login-loginbutton center" ng-click="login()"></input>
+    </div>
+  </div>
+<!--   <div class="row">
+    <div class="col">
+      <a class="login-forgot center" href="#/tab/account">Click here if you forgot password?</a>
+    </div>
+  </div> -->
+</form>
+</ion-content>
+</ion-view>
